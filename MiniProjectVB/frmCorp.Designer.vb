@@ -361,7 +361,7 @@ Partial Class frmCorp
         Me.txtCorpfax.MaxLength = 10
         Me.txtCorpfax.Name = "txtCorpfax"
         Me.txtCorpfax.Size = New System.Drawing.Size(119, 27)
-        Me.txtCorpfax.TabIndex = 10
+        Me.txtCorpfax.TabIndex = 11
         '
         'Panel3
         '

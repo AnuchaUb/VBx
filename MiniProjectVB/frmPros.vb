@@ -497,4 +497,13 @@ Public Class frmPros
             btnDelete.Enabled = False
         End If
     End Sub
+
+    Private Sub txtProamount_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtProamount.KeyPress, txtProwarranty.KeyPress, txtProprice.KeyPress, txtProbtu.KeyPress
+        Dim keyInt As Integer = Asc(e.KeyChar)
+        If (keyInt >= 48 And keyInt <= 57) Or keyInt = 48 Or keyInt = 8 Then
+            Exit Sub
+        Else
+            e.KeyChar = Nothing
+        End If
+    End Sub
 End Class

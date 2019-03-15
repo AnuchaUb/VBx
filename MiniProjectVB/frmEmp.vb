@@ -42,6 +42,8 @@ Public Class frmEmp
         myCon.Close()
     End Sub
     Private Sub frmEmp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtEmppass.PasswordChar = "•"
+
         connData()
         If cboDep.Items.Count = 0 Or cboEmpdep.Items.Count = 0 Then
             conncboDep()
@@ -85,7 +87,7 @@ Public Class frmEmp
         dgvShowemp.Columns(13).HeaderText = "เงินเดือน"
 
         If dgvShowemp.RowCount = 0 Or dgvShowemp.SelectedRows.Count = 0 Then
-            MessageBox.Show("กรุณาเพิ่มข้อมูลลูกค้าด้วยครับ", "ไม่มีข้อมูลลูกค้า", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("กรุณาเพิ่มข้อมูลพนักงานด้วยครับ", "ไม่มีข้อมูลพนักงาน", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Panel1.Enabled = False
             Panel2.Enabled = False
             Panel3.Enabled = False
@@ -469,5 +471,23 @@ Public Class frmEmp
         txtEmpbirthday.Text = myDR.Item("empbirthday")
 
         myDR.Close()
+    End Sub
+
+    Private Sub txtEmpsalary_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpsalary.KeyPress, txtEmpphone.KeyPress, txtEmppostalcode.KeyPress, txtEmpidcard.KeyPress
+        Dim keyInt As Integer = Asc(e.KeyChar)
+        If (keyInt >= 48 And keyInt <= 57) Or keyInt = 48 Or keyInt = 8 Then
+            Exit Sub
+        Else
+            e.KeyChar = Nothing
+        End If
+    End Sub
+
+    Private Sub txtEmpbirthday_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpbirthday.KeyPress
+        Dim keyInt As Integer = Asc(e.KeyChar)
+        If (keyInt >= 48 And keyInt <= 57) Or keyInt = 48 Or keyInt = 8 Or keyInt = 47 Or keyInt = 45 Then
+            Exit Sub
+        Else
+            e.KeyChar = Nothing
+        End If
     End Sub
 End Class

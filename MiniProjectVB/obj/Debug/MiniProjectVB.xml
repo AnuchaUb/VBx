@@ -62,7 +62,37 @@ MiniProjectVB
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Air_Conditioner_100px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Air_Conditioner_100px1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Air_Conditioner_100px11">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Analyze_100px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Approval_70px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MiniProjectVB.My.Resources.Resources.icons8_Broom_30px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Business_Building_100px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -77,7 +107,27 @@ MiniProjectVB
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Cancel_50px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Cancel_70px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Cash_in_Hand_50px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MiniProjectVB.My.Resources.Resources.icons8_Conference_75px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Customer_Support_100px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -98,6 +148,11 @@ MiniProjectVB
 </summary>
 </member>
 <member name="P:MiniProjectVB.My.Resources.Resources.icons8_Edit_Property_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Edit_Property_70px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -132,6 +187,16 @@ MiniProjectVB
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Ok_50px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Paid_100px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MiniProjectVB.My.Resources.Resources.icons8_Paid_75px_1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -153,6 +218,11 @@ MiniProjectVB
 </summary>
 </member>
 <member name="P:MiniProjectVB.My.Resources.Resources.icons8_Price_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Queue_100px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -192,7 +262,32 @@ MiniProjectVB
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Services_100px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Settings_100px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Shutdown_100px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:MiniProjectVB.My.Resources.Resources.icons8_Shutdown_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Shutdown_50px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:MiniProjectVB.My.Resources.Resources.icons8_Team_100px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

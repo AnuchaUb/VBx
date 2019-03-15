@@ -59,6 +59,18 @@ Partial Class frmSale
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.dgvShowdetail = New System.Windows.Forms.DataGridView()
+        Me.proid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.brandname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.promod = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.protype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.proprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.proamount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.prototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblNet = New System.Windows.Forms.Label()
+        Me.btnOksale = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblunitinstock = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -127,20 +139,17 @@ Partial Class frmSale
         Me.lblDatetime.Name = "lblDatetime"
         Me.lblDatetime.Size = New System.Drawing.Size(180, 31)
         Me.lblDatetime.TabIndex = 3
-        Me.lblDatetime.Text = "30/08/20X5  16:25"
         Me.lblDatetime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblEmployee
         '
         Me.lblEmployee.AutoSize = True
-        Me.lblEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblEmployee.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmployee.ForeColor = System.Drawing.Color.Navy
         Me.lblEmployee.Location = New System.Drawing.Point(413, 87)
         Me.lblEmployee.Name = "lblEmployee"
-        Me.lblEmployee.Size = New System.Drawing.Size(144, 33)
+        Me.lblEmployee.Size = New System.Drawing.Size(0, 31)
         Me.lblEmployee.TabIndex = 3
-        Me.lblEmployee.Text = "นายอนุชา อุบลเลิศ"
         Me.lblEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblOrdernumber
@@ -152,7 +161,6 @@ Partial Class frmSale
         Me.lblOrdernumber.Name = "lblOrdernumber"
         Me.lblOrdernumber.Size = New System.Drawing.Size(151, 31)
         Me.lblOrdernumber.TabIndex = 3
-        Me.lblOrdernumber.Text = "S20X5/000X"
         Me.lblOrdernumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
@@ -221,14 +229,12 @@ Partial Class frmSale
         'lblCus
         '
         Me.lblCus.AutoSize = True
-        Me.lblCus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCus.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCus.ForeColor = System.Drawing.Color.Navy
         Me.lblCus.Location = New System.Drawing.Point(388, 25)
         Me.lblCus.Name = "lblCus"
-        Me.lblCus.Size = New System.Drawing.Size(144, 33)
+        Me.lblCus.Size = New System.Drawing.Size(0, 31)
         Me.lblCus.TabIndex = 3
-        Me.lblCus.Text = "นายอนุชา อุบลเลิศ"
         Me.lblCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnFindcus
@@ -314,6 +320,8 @@ Partial Class frmSale
         Me.Panel3.Controls.Add(Me.txtProid)
         Me.Panel3.Controls.Add(Me.Label18)
         Me.Panel3.Controls.Add(Me.Label20)
+        Me.Panel3.Controls.Add(Me.lblunitinstock)
+        Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label17)
         Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.Label13)
@@ -355,40 +363,34 @@ Partial Class frmSale
         'lblTotalprice
         '
         Me.lblTotalprice.AutoSize = True
-        Me.lblTotalprice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblTotalprice.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalprice.ForeColor = System.Drawing.Color.Navy
         Me.lblTotalprice.Location = New System.Drawing.Point(791, 74)
         Me.lblTotalprice.Name = "lblTotalprice"
-        Me.lblTotalprice.Size = New System.Drawing.Size(75, 33)
+        Me.lblTotalprice.Size = New System.Drawing.Size(0, 31)
         Me.lblTotalprice.TabIndex = 3
-        Me.lblTotalprice.Text = "999,999"
         Me.lblTotalprice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblProprice
         '
         Me.lblProprice.AutoSize = True
-        Me.lblProprice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblProprice.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProprice.ForeColor = System.Drawing.Color.Navy
         Me.lblProprice.Location = New System.Drawing.Point(366, 74)
         Me.lblProprice.Name = "lblProprice"
-        Me.lblProprice.Size = New System.Drawing.Size(70, 33)
+        Me.lblProprice.Size = New System.Drawing.Size(0, 31)
         Me.lblProprice.TabIndex = 3
-        Me.lblProprice.Text = "50,964"
         Me.lblProprice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblProtype
         '
         Me.lblProtype.AutoSize = True
-        Me.lblProtype.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblProtype.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProtype.ForeColor = System.Drawing.Color.Navy
         Me.lblProtype.Location = New System.Drawing.Point(1027, 23)
         Me.lblProtype.Name = "lblProtype"
-        Me.lblProtype.Size = New System.Drawing.Size(105, 33)
+        Me.lblProtype.Size = New System.Drawing.Size(0, 31)
         Me.lblProtype.TabIndex = 3
-        Me.lblProtype.Text = "แบบเคลื่อนที่"
         Me.lblProtype.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnRemove
@@ -430,33 +432,29 @@ Partial Class frmSale
         'lblModel
         '
         Me.lblModel.AutoSize = True
-        Me.lblModel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblModel.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblModel.ForeColor = System.Drawing.Color.Navy
         Me.lblModel.Location = New System.Drawing.Point(643, 20)
         Me.lblModel.Name = "lblModel"
-        Me.lblModel.Size = New System.Drawing.Size(254, 33)
+        Me.lblModel.Size = New System.Drawing.Size(0, 31)
         Me.lblModel.TabIndex = 3
-        Me.lblModel.Text = "ENTERPRISE 42TOVGS010-703"
         Me.lblModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblBrandname
         '
         Me.lblBrandname.AutoSize = True
-        Me.lblBrandname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblBrandname.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBrandname.ForeColor = System.Drawing.Color.Navy
         Me.lblBrandname.Location = New System.Drawing.Point(366, 21)
         Me.lblBrandname.Name = "lblBrandname"
-        Me.lblBrandname.Size = New System.Drawing.Size(195, 33)
+        Me.lblBrandname.Size = New System.Drawing.Size(0, 31)
         Me.lblBrandname.TabIndex = 3
-        Me.lblBrandname.Text = "MITSUBISHI ELECTRIC"
         Me.lblBrandname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtProamount
         '
         Me.txtProamount.Location = New System.Drawing.Point(567, 78)
-        Me.txtProamount.MaxLength = 4
+        Me.txtProamount.MaxLength = 100
         Me.txtProamount.Name = "txtProamount"
         Me.txtProamount.Size = New System.Drawing.Size(64, 22)
         Me.txtProamount.TabIndex = 4
@@ -541,7 +539,7 @@ Partial Class frmSale
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 384)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1204, 222)
+        Me.Panel4.Size = New System.Drawing.Size(1204, 248)
         Me.Panel4.TabIndex = 21
         '
         'dgvShowdetail
@@ -551,24 +549,139 @@ Partial Class frmSale
         Me.dgvShowdetail.AllowUserToResizeColumns = False
         Me.dgvShowdetail.AllowUserToResizeRows = False
         Me.dgvShowdetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvShowdetail.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.proid, Me.brandname, Me.promod, Me.protype, Me.proprice, Me.proamount, Me.prototal})
         Me.dgvShowdetail.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvShowdetail.Location = New System.Drawing.Point(0, 0)
         Me.dgvShowdetail.Name = "dgvShowdetail"
+        Me.dgvShowdetail.ReadOnly = True
         Me.dgvShowdetail.RowTemplate.Height = 24
         Me.dgvShowdetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvShowdetail.Size = New System.Drawing.Size(1204, 222)
+        Me.dgvShowdetail.Size = New System.Drawing.Size(1204, 248)
         Me.dgvShowdetail.TabIndex = 0
+        '
+        'proid
+        '
+        Me.proid.HeaderText = "รหัสสินค้า"
+        Me.proid.MaxInputLength = 4
+        Me.proid.Name = "proid"
+        Me.proid.ReadOnly = True
+        Me.proid.Width = 80
+        '
+        'brandname
+        '
+        Me.brandname.HeaderText = "ยี่ห้อ"
+        Me.brandname.Name = "brandname"
+        Me.brandname.ReadOnly = True
+        '
+        'promod
+        '
+        Me.promod.HeaderText = "Model"
+        Me.promod.Name = "promod"
+        Me.promod.ReadOnly = True
+        Me.promod.Width = 380
+        '
+        'protype
+        '
+        Me.protype.HeaderText = "ประเภทสินค้า"
+        Me.protype.Name = "protype"
+        Me.protype.ReadOnly = True
+        '
+        'proprice
+        '
+        Me.proprice.HeaderText = "ราคา"
+        Me.proprice.Name = "proprice"
+        Me.proprice.ReadOnly = True
+        '
+        'proamount
+        '
+        Me.proamount.HeaderText = "จำนวน"
+        Me.proamount.Name = "proamount"
+        Me.proamount.ReadOnly = True
+        Me.proamount.Width = 80
+        '
+        'prototal
+        '
+        Me.prototal.HeaderText = "ราคารวม"
+        Me.prototal.Name = "prototal"
+        Me.prototal.ReadOnly = True
+        Me.prototal.Width = 180
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(546, 673)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(239, 49)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "รวมทั้งหมดเป็นเงิน :"
+        '
+        'lblNet
+        '
+        Me.lblNet.AutoSize = True
+        Me.lblNet.BackColor = System.Drawing.Color.White
+        Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblNet.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNet.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblNet.Location = New System.Drawing.Point(791, 664)
+        Me.lblNet.Name = "lblNet"
+        Me.lblNet.Size = New System.Drawing.Size(99, 63)
+        Me.lblNet.TabIndex = 3
+        Me.lblNet.Text = "0.00"
+        '
+        'btnOksale
+        '
+        Me.btnOksale.BackColor = System.Drawing.Color.Transparent
+        Me.btnOksale.FlatAppearance.BorderSize = 0
+        Me.btnOksale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnOksale.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOksale.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOksale.ForeColor = System.Drawing.Color.Navy
+        Me.btnOksale.Image = Global.MiniProjectVB.My.Resources.Resources.icons8_Cash_in_Hand_50px
+        Me.btnOksale.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnOksale.Location = New System.Drawing.Point(1033, 651)
+        Me.btnOksale.Name = "btnOksale"
+        Me.btnOksale.Size = New System.Drawing.Size(76, 89)
+        Me.btnOksale.TabIndex = 18
+        Me.btnOksale.Text = "ยืนยัน"
+        Me.btnOksale.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnOksale.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Navy
+        Me.Label4.Location = New System.Drawing.Point(405, 107)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(156, 31)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "จำนวนสินค้าในร้าน :"
+        '
+        'lblunitinstock
+        '
+        Me.lblunitinstock.AutoSize = True
+        Me.lblunitinstock.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblunitinstock.ForeColor = System.Drawing.Color.Navy
+        Me.lblunitinstock.Location = New System.Drawing.Point(561, 107)
+        Me.lblunitinstock.Name = "lblunitinstock"
+        Me.lblunitinstock.Size = New System.Drawing.Size(0, 31)
+        Me.lblunitinstock.TabIndex = 3
         '
         'frmSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1204, 732)
+        Me.ClientSize = New System.Drawing.Size(1204, 754)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.btnOksale)
+        Me.Controls.Add(Me.lblNet)
         Me.Name = "frmSale"
         Me.Text = "Sale"
         Me.Panel1.ResumeLayout(False)
@@ -580,6 +693,7 @@ Partial Class frmSale
         Me.Panel4.ResumeLayout(False)
         CType(Me.dgvShowdetail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -620,4 +734,16 @@ Partial Class frmSale
     Friend WithEvents dgvShowdetail As DataGridView
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnRemove As Button
+    Friend WithEvents proid As DataGridViewTextBoxColumn
+    Friend WithEvents brandname As DataGridViewTextBoxColumn
+    Friend WithEvents promod As DataGridViewTextBoxColumn
+    Friend WithEvents protype As DataGridViewTextBoxColumn
+    Friend WithEvents proprice As DataGridViewTextBoxColumn
+    Friend WithEvents proamount As DataGridViewTextBoxColumn
+    Friend WithEvents prototal As DataGridViewTextBoxColumn
+    Friend WithEvents lblNet As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btnOksale As Button
+    Friend WithEvents lblunitinstock As Label
+    Friend WithEvents Label4 As Label
 End Class

@@ -462,4 +462,13 @@ Public Class frmCorp
         Call frmCorp_Load(sender, e)
         txtSeach.Clear()
     End Sub
+
+    Private Sub txtCorpfax_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpfax.KeyPress, txtCorppostalcode.KeyPress, txtCorpphone.KeyPress
+        Dim keyInt As Integer = Asc(e.KeyChar)
+        If (keyInt >= 48 And keyInt <= 57) Or keyInt = 48 Or keyInt = 8 Then
+            Exit Sub
+        Else
+            e.KeyChar = Nothing
+        End If
+    End Sub
 End Class

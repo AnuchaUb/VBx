@@ -382,4 +382,21 @@ Public Class frmCus
         txtScuslname.Clear()
     End Sub
 
+    Private Sub txtCusphone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCusphone.KeyPress, txtCuspostalcode.KeyPress
+        Dim keyInt As Integer = Asc(e.KeyChar)
+        If (keyInt >= 48 And keyInt <= 57) Or keyInt = 48 Or keyInt = 8 Then
+            Exit Sub
+        Else
+            e.KeyChar = Nothing
+        End If
+    End Sub
+
+    Private Sub txtCusbirthday_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCusbirthday.KeyPress
+        Dim keyInt As Integer = Asc(e.KeyChar)
+        If (keyInt >= 48 And keyInt <= 57) Or keyInt = 48 Or keyInt = 8 Or keyInt = 47 Or keyInt = 45 Then
+            Exit Sub
+        Else
+            e.KeyChar = Nothing
+        End If
+    End Sub
 End Class
