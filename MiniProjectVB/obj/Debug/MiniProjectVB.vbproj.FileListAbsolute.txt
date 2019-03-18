@@ -36,3 +36,9 @@ D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\CrystalDecisions.ReportAp
 D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\stdole.dll
+D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\FlashControlV71.dll
+D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\ShockwaveFlashObjects.dll
+D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmSaledetail.resources
+D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmReportStock.resources
+D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmsumSale.resources

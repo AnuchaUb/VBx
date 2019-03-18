@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmSale
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmSale
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -53,6 +53,8 @@ Partial Class frmSale
         Me.txtProid = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
+        Me.lblunitinstock = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -69,8 +71,6 @@ Partial Class frmSale
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblNet = New System.Windows.Forms.Label()
         Me.btnOksale = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblunitinstock = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -489,6 +489,27 @@ Partial Class frmSale
         Me.Label20.TabIndex = 3
         Me.Label20.Text = "รวมเป็นเงิน :"
         '
+        'lblunitinstock
+        '
+        Me.lblunitinstock.AutoSize = True
+        Me.lblunitinstock.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblunitinstock.ForeColor = System.Drawing.Color.Navy
+        Me.lblunitinstock.Location = New System.Drawing.Point(561, 107)
+        Me.lblunitinstock.Name = "lblunitinstock"
+        Me.lblunitinstock.Size = New System.Drawing.Size(0, 31)
+        Me.lblunitinstock.TabIndex = 3
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Navy
+        Me.Label4.Location = New System.Drawing.Point(405, 107)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(156, 31)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "จำนวนสินค้าในร้าน :"
+        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -647,27 +668,6 @@ Partial Class frmSale
         Me.btnOksale.Text = "ยืนยัน"
         Me.btnOksale.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnOksale.UseVisualStyleBackColor = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Navy
-        Me.Label4.Location = New System.Drawing.Point(405, 107)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(156, 31)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "จำนวนสินค้าในร้าน :"
-        '
-        'lblunitinstock
-        '
-        Me.lblunitinstock.AutoSize = True
-        Me.lblunitinstock.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblunitinstock.ForeColor = System.Drawing.Color.Navy
-        Me.lblunitinstock.Location = New System.Drawing.Point(561, 107)
-        Me.lblunitinstock.Name = "lblunitinstock"
-        Me.lblunitinstock.Size = New System.Drawing.Size(0, 31)
-        Me.lblunitinstock.TabIndex = 3
         '
         'frmSale
         '

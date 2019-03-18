@@ -95,6 +95,7 @@ Partial Class frmEmp
         '
         'cboDep
         '
+        Me.cboDep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboDep.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboDep.FormattingEnabled = True
         Me.cboDep.Location = New System.Drawing.Point(117, 14)
@@ -499,6 +500,7 @@ Partial Class frmEmp
         '
         'cboEmpdep
         '
+        Me.cboEmpdep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEmpdep.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboEmpdep.FormattingEnabled = True
         Me.cboEmpdep.Location = New System.Drawing.Point(100, 230)

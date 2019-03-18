@@ -44,7 +44,45 @@ Public Class frmMain
             End If
             myDR.Close()
         End If
+        If depname = "ผู้จัดการ" Or depname = "บุคคล" Then
 
+            btnSell.Enabled = False
+            btnCorp.Enabled = True
+            btnProtype.Enabled = False
+            btnPros.Enabled = False
+            btnEditshop.Enabled = True
+            btnEmp.Enabled = True
+            btnDep.Enabled = True
+            btnCus.Enabled = True
+            btnList.Enabled = True
+            btnReport.Enabled = True
+
+
+        ElseIf depname = "การบัญชี" Then
+
+            btnSell.Enabled = False
+            btnCorp.Enabled = False
+            btnProtype.Enabled = False
+            btnPros.Enabled = False
+            btnEditshop.Enabled = False
+            btnEmp.Enabled = False
+            btnDep.Enabled = False
+            btnCus.Enabled = False
+            btnList.Enabled = True
+            btnReport.Enabled = True
+
+        Else
+            btnSell.Enabled = True
+            btnCorp.Enabled = True
+            btnProtype.Enabled = True
+            btnPros.Enabled = True
+            btnEditshop.Enabled = False
+            btnEmp.Enabled = False
+            btnDep.Enabled = False
+            btnCus.Enabled = True
+            btnList.Enabled = True
+            btnReport.Enabled = True
+        End If
 
     End Sub
 
@@ -77,8 +115,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-
-        Me.Close()
+        Call frmMain_Load(sender, e)
 
     End Sub
 
@@ -90,14 +127,27 @@ Public Class frmMain
 
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         connData()
+        btnupdate.Visible = False
         strSql = "update tbshop set shopname=@sn,shopaddress=@sa"
         myCom = New SqlCommand(strSql, myCon)
         myCom.CommandType = CommandType.Text
         myCom.Parameters.AddWithValue("sn", txtname.Text)
         myCom.Parameters.AddWithValue("sa", txtadd.Text)
         myCom.ExecuteNonQuery()
-        Call frmMain_Load(sender, e)
+
         MessageBox.Show("เปลี่ยนข้อมูลร้านเรียบร้อยแล้ว", "การแก้ไขข้อมูลร้านสำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         myCon.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnList.Click
+        frmSaledetail.Show()
+    End Sub
+
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        frmsumSale.Show()
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
     End Sub
 End Class

@@ -150,6 +150,47 @@ Public Class frmEmp
         Panel1.Enabled = False
         Panel2.Enabled = False
         Panel3.Enabled = True
+        If depname = "ผู้จัดการ" Or depname = "บุคคล" Then
+
+            'ElseIf empid = txtEmpid.Text Then
+
+            '            txtEmpid.Enabled = False
+            '           txtEmppass.Enabled = True
+            '          txtEmpname.Enabled = True
+            '         txtEmplname.Enabled = True
+            '        radMale.Enabled = True
+            '       radFemale.Enabled = True
+            '      txtEmpbirthday.Enabled = True
+            '     txtEmpidcard.Enabled = True
+            '    txtEmpaddress.Enabled = True
+            '   txtEmpsubarea.Enabled = True
+            '  txtEmparea.Enabled = True
+            ' txtEmpprovince.Enabled = True
+            ' txtEmppostalcode.Enabled = True
+            'txtEmpphone.Enabled = True
+            'txtEmpsalary.Enabled = False
+            'txtEmphiredate.Enabled = False
+            'cboEmpdep.Enabled = False
+
+        Else
+            txtEmpid.Enabled = False
+            txtEmppass.Enabled = False
+            txtEmpname.Enabled = False
+            txtEmplname.Enabled = False
+            radMale.Enabled = False
+            radFemale.Enabled = False
+            txtEmpbirthday.Enabled = False
+            txtEmpidcard.Enabled = False
+            txtEmpaddress.Enabled = False
+            txtEmpsubarea.Enabled = False
+            txtEmparea.Enabled = False
+            txtEmpprovince.Enabled = False
+            txtEmppostalcode.Enabled = False
+            txtEmpphone.Enabled = False
+            txtEmpsalary.Enabled = False
+            txtEmphiredate.Enabled = False
+            cboEmpdep.Enabled = False
+        End If
         btnAdd.Enabled = False
         btnEdit.Enabled = False
         btnDelete.Enabled = False

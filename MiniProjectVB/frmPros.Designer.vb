@@ -85,6 +85,7 @@ Partial Class frmPros
         '
         'cbobrand2
         '
+        Me.cbobrand2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbobrand2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbobrand2.FormattingEnabled = True
         Me.cbobrand2.Location = New System.Drawing.Point(97, 14)
@@ -149,6 +150,7 @@ Partial Class frmPros
         '
         'cboProbrand
         '
+        Me.cboProbrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboProbrand.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboProbrand.FormattingEnabled = True
         Me.cboProbrand.Location = New System.Drawing.Point(303, 31)

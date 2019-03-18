@@ -31,6 +31,7 @@ Public Class frmSale
         Panel3.Enabled = False
         Panel4.Enabled = False
         btnOksale.Enabled = False
+
     End Sub
 
     Private Sub btnSale_Click(sender As Object, e As EventArgs) Handles btnSale.Click
@@ -67,6 +68,7 @@ Public Class frmSale
         dgvShowdetail.Rows.Clear()
         lblNet.Text = FormatNumber(net, 2)
         btnOksale.Enabled = False
+
         lblunitinstock.Text = ""
     End Sub
 
@@ -105,6 +107,7 @@ Public Class frmSale
         lblunitinstock.Text = ""
         dgvShowdetail.Rows.Clear()
         btnOksale.Enabled = False
+
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -177,6 +180,7 @@ Public Class frmSale
         lblTotalprice.Text = ""
         lblunitinstock.Text = ""
         btnOksale.Enabled = True
+
     End Sub
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
         Dim i As Integer = dgvShowdetail.CurrentCell.RowIndex
@@ -187,8 +191,10 @@ Public Class frmSale
         If dgvShowdetail.RowCount = 0 Then
             btnRemove.Enabled = False
             btnOksale.Enabled = False
+
         Else
             btnOksale.Enabled = True
+
         End If
 
         For i = 0 To dgvShowdetail.RowCount - 1
@@ -397,6 +403,7 @@ Public Class frmSale
                 Panel3.Enabled = False
                 Panel4.Enabled = False
                 btnOksale.Enabled = False
+
                 lblOrdernumber.Text = ""
                 lblDatetime.Text = ""
                 lblEmployee.Text = ""

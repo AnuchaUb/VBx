@@ -37,7 +37,7 @@ Public Class frmCus
         dgvShowcus.Columns(2).Width = 150
         dgvShowcus.Columns(3).Width = 80
         dgvShowcus.Columns(4).Width = 50
-        dgvShowcus.Columns(5).Width = 270
+        dgvShowcus.Columns(5).Width = 260
         dgvShowcus.Columns(6).Width = 80
         dgvShowcus.Columns(7).Width = 80
         dgvShowcus.Columns(8).Width = 50

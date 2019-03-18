@@ -46,6 +46,7 @@ Partial Class frmMain
         Me.btnPros = New System.Windows.Forms.Button()
         Me.btnProtype = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnList = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -61,7 +62,7 @@ Partial Class frmMain
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1495, 185)
+        Me.Panel1.Size = New System.Drawing.Size(1670, 185)
         Me.Panel1.TabIndex = 0
         '
         'txtadd
@@ -98,7 +99,7 @@ Partial Class frmMain
         Me.btnupdate.ForeColor = System.Drawing.Color.White
         Me.btnupdate.Image = Global.MiniProjectVB.My.Resources.Resources.icons8_Save_Close_48px
         Me.btnupdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnupdate.Location = New System.Drawing.Point(1110, 12)
+        Me.btnupdate.Location = New System.Drawing.Point(1285, 12)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(172, 100)
         Me.btnupdate.TabIndex = 0
@@ -118,7 +119,7 @@ Partial Class frmMain
         Me.btnEditshop.ForeColor = System.Drawing.Color.White
         Me.btnEditshop.Image = Global.MiniProjectVB.My.Resources.Resources.icons8_Settings_100px
         Me.btnEditshop.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnEditshop.Location = New System.Drawing.Point(1311, 12)
+        Me.btnEditshop.Location = New System.Drawing.Point(1486, 12)
         Me.btnEditshop.Name = "btnEditshop"
         Me.btnEditshop.Size = New System.Drawing.Size(172, 157)
         Me.btnEditshop.TabIndex = 0
@@ -150,7 +151,7 @@ Partial Class frmMain
         Me.btnReport.ForeColor = System.Drawing.Color.Navy
         Me.btnReport.Image = Global.MiniProjectVB.My.Resources.Resources.icons8_Analyze_100px
         Me.btnReport.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnReport.Location = New System.Drawing.Point(1288, 25)
+        Me.btnReport.Location = New System.Drawing.Point(1466, 25)
         Me.btnReport.Name = "btnReport"
         Me.btnReport.Size = New System.Drawing.Size(172, 164)
         Me.btnReport.TabIndex = 0
@@ -210,7 +211,7 @@ Partial Class frmMain
         Me.btnLogout.ForeColor = System.Drawing.Color.Navy
         Me.btnLogout.Image = Global.MiniProjectVB.My.Resources.Resources.icons8_Shutdown_100px
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnLogout.Location = New System.Drawing.Point(1311, 20)
+        Me.btnLogout.Location = New System.Drawing.Point(1486, 20)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(172, 164)
         Me.btnLogout.TabIndex = 0
@@ -284,7 +285,7 @@ Partial Class frmMain
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 185)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1495, 205)
+        Me.Panel2.Size = New System.Drawing.Size(1670, 205)
         Me.Panel2.TabIndex = 1
         '
         'btnSell
@@ -416,6 +417,7 @@ Partial Class frmMain
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.btnSell)
+        Me.Panel3.Controls.Add(Me.btnList)
         Me.Panel3.Controls.Add(Me.btnReport)
         Me.Panel3.Controls.Add(Me.btnProtype)
         Me.Panel3.Controls.Add(Me.btnCus)
@@ -426,15 +428,33 @@ Partial Class frmMain
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 390)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1495, 280)
+        Me.Panel3.Size = New System.Drawing.Size(1670, 372)
         Me.Panel3.TabIndex = 2
+        '
+        'btnList
+        '
+        Me.btnList.AutoSize = True
+        Me.btnList.FlatAppearance.BorderSize = 0
+        Me.btnList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnList.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnList.ForeColor = System.Drawing.Color.Navy
+        Me.btnList.Image = Global.MiniProjectVB.My.Resources.Resources.icons8_List_100px
+        Me.btnList.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnList.Location = New System.Drawing.Point(1288, 25)
+        Me.btnList.Name = "btnList"
+        Me.btnList.Size = New System.Drawing.Size(172, 164)
+        Me.btnList.TabIndex = 0
+        Me.btnList.Text = "รายการขาย"
+        Me.btnList.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnList.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1495, 670)
+        Me.ClientSize = New System.Drawing.Size(1670, 762)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -475,4 +495,5 @@ Partial Class frmMain
     Friend WithEvents txtadd As TextBox
     Friend WithEvents txtname As TextBox
     Friend WithEvents btnupdate As Button
+    Friend WithEvents btnList As Button
 End Class
