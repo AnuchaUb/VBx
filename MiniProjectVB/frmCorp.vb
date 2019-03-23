@@ -403,10 +403,10 @@ Public Class frmCorp
     Private Sub btnSeach_Click(sender As Object, e As EventArgs) Handles btnSeach.Click
 
         connData()
-        strSql = "select * from tbcompany where companyid  like '" & txtSeach.Text & "' or comname like '" & txtSeach.Text & "'  or brandname like '" & txtSeach.Text & "'" & vbCrLf &
-                " or comaddress like '" & txtSeach.Text & "'  or comsubarea like '" & txtSeach.Text & "'  " & vbCrLf &
-                "or comarea like '" & txtSeach.Text & "'  or comprovince like '" & txtSeach.Text & "'  or comcountry like '" & txtSeach.Text & "'  or compostalcode like '" & txtSeach.Text & "' " & vbCrLf &
-                " or comphone like '" & txtSeach.Text & "'  or comfax like '" & txtSeach.Text & "' "
+        strSql = "select * from tbcompany where companyid  like '" & txtSeach.Text & "%' or comname like '" & txtSeach.Text & "%'  or brandname like '" & txtSeach.Text & "%'" & vbCrLf &
+                " or comaddress like '" & txtSeach.Text & "%'  or comsubarea like '" & txtSeach.Text & "%'  " & vbCrLf &
+                "or comarea like '" & txtSeach.Text & "%'  or comprovince like '" & txtSeach.Text & "%'  or comcountry like '" & txtSeach.Text & "%'  or compostalcode like '" & txtSeach.Text & "%' " & vbCrLf &
+                " or comphone like '" & txtSeach.Text & "%'  or comfax like '" & txtSeach.Text & "%' "
         myCom = New SqlCommand(strSql, myCon)
         myCom.CommandType = CommandType.Text
         myDR = myCom.ExecuteReader
@@ -461,6 +461,7 @@ Public Class frmCorp
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Call frmCorp_Load(sender, e)
         txtSeach.Clear()
+        ctxt()
     End Sub
 
     Private Sub txtCorpfax_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorpfax.KeyPress, txtCorppostalcode.KeyPress, txtCorpphone.KeyPress

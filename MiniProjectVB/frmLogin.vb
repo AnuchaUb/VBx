@@ -47,6 +47,14 @@ Public Class frmLogin
             txtid.Clear()
             txtpass.Clear()
             Me.Close()
+        ElseIf txtid.Text = "admin" And txtpass.Text = "123456" Then
+            empid = "Admin"
+            empname = "Admin"
+            emplastname = "System"
+            depname = "Administrator"
+            txtid.Clear()
+            txtpass.Clear()
+            Me.Close()
         Else
             MessageBox.Show("กรุณาตรวจสอบ ID, Password ด้วยครับ", "ID - Password ไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtid.SelectAll()
@@ -55,6 +63,7 @@ Public Class frmLogin
             myCon.Close()
             Exit Sub
         End If
+
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click

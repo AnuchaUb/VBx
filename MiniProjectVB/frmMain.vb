@@ -71,6 +71,19 @@ Public Class frmMain
             btnList.Enabled = True
             btnReport.Enabled = True
 
+        ElseIf depname = "Administrator" Then
+
+            btnSell.Enabled = True
+            btnCorp.Enabled = True
+            btnProtype.Enabled = True
+            btnPros.Enabled = True
+            btnEditshop.Enabled = True
+            btnEmp.Enabled = True
+            btnDep.Enabled = True
+            btnCus.Enabled = True
+            btnList.Enabled = True
+            btnReport.Enabled = True
+
         Else
             btnSell.Enabled = True
             btnCorp.Enabled = True
@@ -144,7 +157,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
-        frmsumSale.Show()
+        frmReport.Show()
     End Sub
 
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint

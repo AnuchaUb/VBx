@@ -16,7 +16,6 @@ D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.xml
 D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.pdb
 D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.vbprojResolveAssemblyReference.cache
 D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmSale.resources
-D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmShop.resources
 D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmFindcus.resources
 D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmFindpro.resources
 D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmLogin.resources
@@ -40,5 +39,4 @@ D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\CrystalDecisions.Windows.
 D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\FlashControlV71.dll
 D:\My Project VB\MiniProjectVB\MiniProjectVB\bin\Debug\ShockwaveFlashObjects.dll
 D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmSaledetail.resources
-D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmReportStock.resources
-D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmsumSale.resources
+D:\My Project VB\MiniProjectVB\MiniProjectVB\obj\Debug\MiniProjectVB.frmReport.resources

@@ -22,6 +22,7 @@ Partial Class frmSaledetail
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSaledetail))
         Me.crvSaledetail = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cbosale = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
@@ -35,7 +36,7 @@ Partial Class frmSaledetail
         Me.crvSaledetail.Dock = System.Windows.Forms.DockStyle.Fill
         Me.crvSaledetail.Location = New System.Drawing.Point(0, 0)
         Me.crvSaledetail.Name = "crvSaledetail"
-        Me.crvSaledetail.Size = New System.Drawing.Size(809, 528)
+        Me.crvSaledetail.Size = New System.Drawing.Size(1005, 528)
         Me.crvSaledetail.TabIndex = 0
         Me.crvSaledetail.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
@@ -43,7 +44,9 @@ Partial Class frmSaledetail
         '
         Me.cbosale.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbosale.FormattingEnabled = True
-        Me.cbosale.Location = New System.Drawing.Point(482, 3)
+        Me.cbosale.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.cbosale.IntegralHeight = False
+        Me.cbosale.Location = New System.Drawing.Point(605, 3)
         Me.cbosale.Name = "cbosale"
         Me.cbosale.Size = New System.Drawing.Size(121, 24)
         Me.cbosale.TabIndex = 1
@@ -52,9 +55,10 @@ Partial Class frmSaledetail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(809, 528)
+        Me.ClientSize = New System.Drawing.Size(1005, 528)
         Me.Controls.Add(Me.cbosale)
         Me.Controls.Add(Me.crvSaledetail)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSaledetail"
         Me.Text = "Sale Detail"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

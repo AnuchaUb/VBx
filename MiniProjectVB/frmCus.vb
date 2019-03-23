@@ -380,6 +380,7 @@ Public Class frmCus
         Call frmCus_Load(sender, e)
         txtScusname.Clear()
         txtScuslname.Clear()
+        ctxt()
     End Sub
 
     Private Sub txtCusphone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCusphone.KeyPress, txtCuspostalcode.KeyPress
@@ -398,5 +399,53 @@ Public Class frmCus
         Else
             e.KeyChar = Nothing
         End If
+    End Sub
+
+    Private Sub txtScusname_TextChanged(sender As Object, e As EventArgs) Handles txtScusname.TextChanged
+
+        If txtScusname.Text = "" Then
+            Call frmCus_Load(sender, e)
+
+        Else
+
+            connData()
+            strSql = "select cusid,cusname,cuslastname,cusbirthday,iif(cussex=1,'ชาย','หญิง') as เพศ,cusaddress,cussubarea,cusarea,cusprovince,cuspostalcode,cusphone from tbcustomers where  cusname  like '" & txtScusname.Text & "%'"
+            myDA = New SqlDataAdapter(strSql, myCon)
+            myDS.Clear()
+            myDA.Fill(myDS, "search")
+            dgvShowcus.DataSource = myDS.Tables("search")
+            myCom = New SqlCommand(strSql, myCon)
+            myCom.CommandType = CommandType.Text
+            myDR = myCom.ExecuteReader
+            If myDR.HasRows Then
+
+            End If
+        End If
+        myDR.Close()
+        myCon.Close()
+    End Sub
+
+    Private Sub txtScuslname_TextChanged(sender As Object, e As EventArgs) Handles txtScuslname.TextChanged
+
+        If txtScusname.Text = "" Then
+            Call frmCus_Load(sender, e)
+
+        Else
+
+            connData()
+            strSql = "select cusid,cusname,cuslastname,cusbirthday,iif(cussex=1,'ชาย','หญิง') as เพศ,cusaddress,cussubarea,cusarea,cusprovince,cuspostalcode,cusphone from tbcustomers where  cuslastname  like '" & txtCusname.Text & txtScuslname.Text & "%'"
+            myDA = New SqlDataAdapter(strSql, myCon)
+            myDS.Clear()
+            myDA.Fill(myDS, "search")
+            dgvShowcus.DataSource = myDS.Tables("search")
+            myCom = New SqlCommand(strSql, myCon)
+            myCom.CommandType = CommandType.Text
+            myDR = myCom.ExecuteReader
+            If myDR.HasRows Then
+
+            End If
+        End If
+        myDR.Close()
+        myCon.Close()
     End Sub
 End Class

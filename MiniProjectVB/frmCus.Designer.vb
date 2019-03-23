@@ -22,6 +22,7 @@ Partial Class frmCus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCus))
         Me.dgvShowcus = New System.Windows.Forms.DataGridView()
         Me.radFemale = New System.Windows.Forms.RadioButton()
         Me.radMale = New System.Windows.Forms.RadioButton()
@@ -552,6 +553,7 @@ Partial Class frmCus
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnAdd)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCus"
         Me.Text = "Customers"
         CType(Me.dgvShowcus, System.ComponentModel.ISupportInitialize).EndInit()

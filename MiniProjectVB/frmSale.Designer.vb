@@ -22,6 +22,7 @@ Partial Class frmSale
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSale))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSale = New System.Windows.Forms.Button()
@@ -682,6 +683,7 @@ Partial Class frmSale
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnOksale)
         Me.Controls.Add(Me.lblNet)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSale"
         Me.Text = "Sale"
         Me.Panel1.ResumeLayout(False)

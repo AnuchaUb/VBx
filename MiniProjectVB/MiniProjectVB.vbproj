@@ -186,18 +186,6 @@
     <Compile Include="frmSaledetail.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShop.Designer.vb">
-      <DependentUpon>frmShop.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmShop.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmsumSale.Designer.vb">
-      <DependentUpon>frmsumSale.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmsumSale.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -265,12 +253,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSaledetail.resx">
       <DependentUpon>frmSaledetail.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmShop.resx">
-      <DependentUpon>frmShop.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmsumSale.resx">
-      <DependentUpon>frmsumSale.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmReportStock
+Partial Class frmReport
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,46 +22,61 @@ Partial Class frmReportStock
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.crvReportStock = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReport))
+        Me.crvReport = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cboBrand = New System.Windows.Forms.ComboBox()
+        Me.cboReport = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'crvReportStock
+        'crvReport
         '
-        Me.crvReportStock.ActiveViewIndex = -1
-        Me.crvReportStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.crvReportStock.Cursor = System.Windows.Forms.Cursors.Default
-        Me.crvReportStock.DisplayStatusBar = False
-        Me.crvReportStock.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.crvReportStock.Location = New System.Drawing.Point(0, 0)
-        Me.crvReportStock.Name = "crvReportStock"
-        Me.crvReportStock.Size = New System.Drawing.Size(1024, 485)
-        Me.crvReportStock.TabIndex = 0
-        Me.crvReportStock.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        Me.crvReport.ActiveViewIndex = -1
+        Me.crvReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.crvReport.Cursor = System.Windows.Forms.Cursors.Default
+        Me.crvReport.DisplayStatusBar = False
+        Me.crvReport.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.crvReport.Location = New System.Drawing.Point(0, 0)
+        Me.crvReport.Name = "crvReport"
+        Me.crvReport.Size = New System.Drawing.Size(1206, 485)
+        Me.crvReport.TabIndex = 2
+        Me.crvReport.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'cboBrand
         '
         Me.cboBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboBrand.FormattingEnabled = True
-        Me.cboBrand.Location = New System.Drawing.Point(516, 3)
+        Me.cboBrand.Location = New System.Drawing.Point(892, 3)
         Me.cboBrand.Name = "cboBrand"
         Me.cboBrand.Size = New System.Drawing.Size(145, 24)
         Me.cboBrand.TabIndex = 1
         '
-        'frmReportStock
+        'cboReport
+        '
+        Me.cboReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboReport.FormattingEnabled = True
+        Me.cboReport.Items.AddRange(New Object() {"รายงานยอดขาย", "รายงานสินค้าคงเหลือ"})
+        Me.cboReport.Location = New System.Drawing.Point(730, 3)
+        Me.cboReport.Name = "cboReport"
+        Me.cboReport.Size = New System.Drawing.Size(156, 24)
+        Me.cboReport.TabIndex = 0
+        '
+        'frmReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1024, 485)
+        Me.ClientSize = New System.Drawing.Size(1206, 485)
+        Me.Controls.Add(Me.cboReport)
         Me.Controls.Add(Me.cboBrand)
-        Me.Controls.Add(Me.crvReportStock)
-        Me.Name = "frmReportStock"
-        Me.Text = "ReportStock"
+        Me.Controls.Add(Me.crvReport)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "frmReport"
+        Me.Text = "Report"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents crvReportStock As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents crvReport As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cboBrand As ComboBox
+    Friend WithEvents cboReport As ComboBox
 End Class

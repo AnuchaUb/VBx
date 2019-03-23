@@ -22,6 +22,7 @@ Public Class frmPros
         myCon.Open()
     End Sub
     Private Sub conncboBrand()
+        cbobrand2.Items.Add("ทั้งหมด")
         connData()
         strSql = "select brandname from tbcompany"
         myCom = New SqlCommand(strSql, myCon)
@@ -369,99 +370,14 @@ Public Class frmPros
         txtProamount.Text = dgvShowpro.Item(10, r).Value
         myDR.Close()
     End Sub
-
-    'Private Sub btnSeach_Click(sender As Object, e As EventArgs) Handles btnSeach.Click
-    '  connData()
-    '  strSql = "select proid,promod, tbcompany.brandname , probtu, tbtypeofproduct.typename," & vbCrLf &
-    '      "iif(proivt=1,'มี','ไม่มี') as inverter ,prosystem,procoldsystem,prowrt,proprice,proUnitsInStock" & vbCrLf &
-    '      " from tbproducts,tbcompany,tbtypeofproduct where proid like '" & txtSearch.Text & "' or brandname like '" & txtSearch.Text & "' or promod like '" & txtSearch.Text & "'" & vbCrLf &
-    '     "or typename like '" & txtSearch.Text & "'or probtu like '" & txtSearch.Text & "' or proivt like '" & txtSearch.Text & "' or prosystem like '" & txtSearch.Text & "'" & vbCrLf &
-    '    "or procoldsystem like '" & txtSearch.Text & "' or prowrt like '" & txtSearch.Text & "'or proprice like '" & txtSearch.Text & "'or prounitsinstock like '" & txtSearch.Text & "'" & vbCrLf &
-    '   "and tbproducts.companyid = tbcompany.companyid and tbproducts.typeproductid = tbtypeofproduct.typeproductid"
-    'myDA = New SqlDataAdapter(strSql, myCon)
-    'myDS.Clear()
-    ' myDA.Fill(myDS, "search")
-    '    dgvShowpro.DataSource = myDS.Tables("search")
-    '
-    '   myCom = New SqlCommand(strSql, myCon)
-    '  myCom.CommandType = CommandType.Text
-    ' 'myCom.Parameters.AddWithValue("@cn", txtScusname.Text)
-    ''myCom.Parameters.AddWithValue("@cln", txtScuslname.Text)
-    ' myDR = myCom.ExecuteReader
-    '  If myDR.HasRows Then
-    '         myDR.Read()
-    '        txtProid.Text = myDR.Item("proid")
-    '       cboProbrand.SelectedItem = myDR.Item("brandname")
-    '      txtPromodel.Text = myDR.Item("promod")
-    '     cboProtype2.SelectedItem = myDR.Item("typename")
-    '    txtProbtu.Text = myDR.Item("probtu")
-    '
-    'If myDR.Item("inverter") = "มี" Then
-    '           radInverter.Checked = True
-    'Else
-    '           radNoninverter.Checked = True
-    'End If
-
-    '       txtProsystem.Text = myDR.Item("prosystem")
-    '      txtProdtbtcold.Text = myDR.Item("procoldsystem")
-    '     txtProwarranty.Text = myDR.Item("prowrt")
-    '    txtProprice.Text = myDR.Item("proprice")
-    '   txtProamount.Text = myDR.Item("prounitsinstock")
-    '  myDR.Close()
-    'Else
-    '       MessageBox.Show("ไม่พบข้อมูลดังกล่าว" & vbCrLf & "กรุณากรอกข้อมูลที่จะค้นหาใหม่ครับ!", "ไม่พบข้อมูล", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-    'End If
-    '   myDR.Close()
-    '  myCon.Close()
-    '    End Sub
-
-
-    'Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs)
-    '   connData()
-    '  strSql = ""
-    ' myDA = New SqlDataAdapter(strSql, myCon)
-    '        'myDS.Clear()
-    '       myDA.Fill(myDS, "search")
-    '      dgvShowpro.DataSource = myDS.Tables("search")
-    '
-    '    myCom = New SqlCommand(strSql, myCon)
-    '    myCom.CommandType = CommandType.Text
-    '    'myCom.Parameters.AddWithValue("@cn", txtScusname.Text)
-    '    'myCom.Parameters.AddWithValue("@cln", txtScuslname.Text)
-    '    myDR = myCom.ExecuteReader
-    ' If myDR.HasRows Then
-    '         myDR.Read()
-    '         txtProid.Text = myDR.Item("proid")
-    '        cboProbrand.SelectedItem = myDR.Item("brandname")
-    '         txtPromodel.Text = myDR.Item("promod")
-    '         cboProtype2.SelectedItem = myDR.Item("typename")
-    '         txtProbtu.Text = myDR.Item("probtu")
-    ''
-    'If myDR.Item("proivt") = "1" Then
-    '            radInverter.Checked = True
-    ' Else
-    '             radNoninverter.Checked = True
-    ' End If
-    '
-    '            txtProsystem.Text = myDR.Item("prosystem")
-    '            txtProdtbtcold.Text = myDR.Item("procoldsystem")
-    '            txtProwarranty.Text = myDR.Item("prowrt")
-    '           txtProprice.Text = myDR.Item("proprice")
-    '           txtProamount.Text = myDR.Item("prounitsinstock")
-    '           myDR.Close()
-    '   Else
-    '
-    '    End If
-    '       myDR.Close()
-    '        myCon.Close()
-    '    End Sub
-
     Private Sub cbobrand2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbobrand2.SelectedIndexChanged
         connData()
-        strSql = "select proid,promod, tbcompany.brandname , probtu, tbtypeofproduct.typename," & vbCrLf &
+        strSql = "Select proid,promod, tbcompany.brandname , probtu, tbtypeofproduct.typename," & vbCrLf &
             "iif(proivt=1,'มี','ไม่มี'),prosystem,procoldsystem,prowrt,proprice,proUnitsInStock" & vbCrLf &
-            " from tbproducts,tbcompany,tbtypeofproduct where tbproducts.typeproductid = tbtypeofproduct.typeproductid And tbproducts.companyid = tbcompany.companyid" & vbCrLf &
-            " and brandname = '" & cbobrand2.SelectedItem & "'"
+            " from tbproducts,tbcompany,tbtypeofproduct where tbproducts.typeproductid = tbtypeofproduct.typeproductid And tbproducts.companyid = tbcompany.companyid"
+        If cbobrand2.SelectedIndex > 0 Then
+            strSql = strSql & " and brandname = '" & cbobrand2.SelectedItem & "'"
+        End If
         myDA = New SqlDataAdapter(strSql, myCon)
         myDS.Clear()
         myDA.Fill(myDS, "cboselect")

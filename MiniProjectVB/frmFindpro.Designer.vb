@@ -22,6 +22,7 @@ Partial Class frmFindpro
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFindpro))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cboprotype = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -135,6 +136,7 @@ Partial Class frmFindpro
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOk)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmFindpro"
         Me.Text = "Find Products"
         Me.Panel1.ResumeLayout(False)

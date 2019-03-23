@@ -52,6 +52,7 @@ Public Class frmSaledetail
     Private Sub frmSaledetail_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbodatasale()
         salereport()
+        cbosale.DropDownHeight = cbosale.ItemHeight * 10
 
     End Sub
 

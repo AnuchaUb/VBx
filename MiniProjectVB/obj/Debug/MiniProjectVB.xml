@@ -22,16 +22,6 @@ MiniProjectVB
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:MiniProjectVB.My.Resources.Resources.Air3">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:MiniProjectVB.My.Resources.Resources.Air3s">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:MiniProjectVB.My.Resources.Resources.icons8_Add_Database_48px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -25,6 +25,8 @@ Public Class frmEmp
         myCon.Open()
     End Sub
     Private Sub conncboDep()
+        cboDep.Items.Add("ทั้งหมด")
+
         connData()
         strSql = "select departmentname from tbdepartment"
         myCom = New SqlCommand(strSql, myCon)
@@ -48,6 +50,7 @@ Public Class frmEmp
         If cboDep.Items.Count = 0 Or cboEmpdep.Items.Count = 0 Then
             conncboDep()
         End If
+
         strSql = "select empid,empname,emplastname,iif(empsex=1,'ชาย','หญิง') as sex,empidcard,empaddress,empsubarea,emparea,empprovince,emppostalcode," & vbCrLf &
             "empphone,tbdepartment.departmentname,emphiredate,empsalary from tbemployee,tbdepartment where tbemployee.departmentid = tbdepartment.departmentid"
         myDA = New SqlDataAdapter(strSql, myCon)
@@ -427,9 +430,13 @@ Public Class frmEmp
 
     Private Sub cboDep_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDep.SelectedIndexChanged
         connData()
+
         strSql = "select empid,empname,emplastname,iif(empsex=1,'ชาย','หญิง') as sex,empidcard,empaddress,empsubarea,emparea,empprovince,emppostalcode," & vbCrLf &
-            "empphone,tbdepartment.departmentname,emphiredate,empsalary from tbemployee,tbdepartment where tbemployee.departmentid = tbdepartment.departmentid and " & vbCrLf &
-            "departmentname = '" & cboDep.SelectedItem & "'"
+            "empphone,tbdepartment.departmentname,emphiredate,empsalary from tbemployee,tbdepartment where tbemployee.departmentid = tbdepartment.departmentid"
+
+        If cboDep.SelectedIndex > 0 Then
+            strSql = strSql & " and departmentname = '" & cboDep.SelectedItem & "'"
+        End If
         myDA = New SqlDataAdapter(strSql, myCon)
         myDS.Clear()
         myDA.Fill(myDS, "cboselect")
