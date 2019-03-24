@@ -148,6 +148,26 @@ Public Class frmCus
         ElseIf Not IsNumeric(txtCuspostalcode.Text) Or Not IsNumeric(txtCusphone.text) Then
             MessageBox.Show("กรุณากรอกข้อมูลให้ถูกต้อง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
+        ElseIf txtCuspostalcode.TextLength <> 5 Then
+            MessageBox.Show("กรุณากรอกรหัสไปรษณีย์ให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCuspostalcode.Focus()
+            Exit Sub
+        ElseIf txtCusphone.TextLength <> 10 Then
+            MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์ให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCusphone.Focus()
+            Exit Sub
+        ElseIf txtCusbirthday.TextLength < 8 Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เกิดไม่ถูกต้อง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCusbirthday.Focus()
+            Exit Sub
+        ElseIf Not IsDate(txtCusbirthday.text) Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เกิดให้ตรงตามรูปแบบดังนี้" & vbCrLf & "เดือน/วัน/ปี : 30/01/1999", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCusbirthday.Focus()
+            Exit Sub
+        ElseIf txtCusbirthday.Text > Date.Now Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เกิดตามความจริง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCusbirthday.Focus()
+            Exit Sub
         Else
             Dim gender As String
             If radMale.Checked Then

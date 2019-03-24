@@ -209,9 +209,11 @@ Public Class frmDep
                 myCom.Parameters.AddWithValue("olddepid", olddepid)
                 myCom.ExecuteNonQuery()
                 MessageBox.Show("ข้อมูลดังกล่าวถูกแก้ไขเรียบร้อยแล้ว", "การแก้ไขข้อมูลสำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-
+                Call frmDep_Load(sender, e)
             End If
         End If
+        txtDepid.Text = ""
+        txtDepname.Text = ""
         btnEdit.Enabled = False
         btnDelete.Enabled = False
         Call btnCancel_Click(sender, e)

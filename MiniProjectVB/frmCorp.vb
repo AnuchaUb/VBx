@@ -150,6 +150,18 @@ Public Class frmCorp
         ElseIf Not IsNumeric(txtCorppostalcode.Text) Or Not IsNumeric(txtCorpphone.Text) Or Not IsNumeric(txtCorpfax.text) Then
             MessageBox.Show("กรอกข้อมูลไม่ถูกต้อง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
+        ElseIf txtCorppostalcode.TextLength <> 5 Then
+            MessageBox.Show("กรุณากรอกรหัสไปรษณีย์ให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCorppostalcode.Focus()
+            Exit Sub
+        ElseIf txtCorpphone.TextLength <> 10 Then
+            MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์ให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCorpphone.Focus()
+            Exit Sub
+        ElseIf txtCorpfax.TextLength <> 10 Then
+            MessageBox.Show("กรุณากรอกเบอร์ FAX ให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtCorpfax.Focus()
+            Exit Sub
         Else
             connData()
             If strBtn = "insert" Then

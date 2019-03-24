@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmEmp
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmEmp
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmp))
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -459,7 +459,7 @@ Partial Class frmEmp
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(102, 31)
         Me.Label16.TabIndex = 42
-        Me.Label16.Text = "ว/ด/ป เกิด :"
+        Me.Label16.Text = "ด/ว/ป เกิด :"
         '
         'Label10
         '
@@ -470,7 +470,7 @@ Partial Class frmEmp
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(144, 31)
         Me.Label10.TabIndex = 43
-        Me.Label10.Text = "ว/ด/ป เข้าทำงาน :"
+        Me.Label10.Text = "ด/ว/ป เข้าทำงาน :"
         '
         'txtEmphiredate
         '

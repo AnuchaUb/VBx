@@ -44,7 +44,7 @@ Public Class frmMain
             End If
             myDR.Close()
         End If
-        If depname = "ผู้จัดการ" Or depname = "บุคคล" Then
+        If depname = "ผู้จัดการ" Then
 
             btnSell.Enabled = False
             btnCorp.Enabled = True
@@ -57,6 +57,18 @@ Public Class frmMain
             btnList.Enabled = True
             btnReport.Enabled = True
 
+        ElseIf depname = "บุคคล" Then
+
+            btnSell.Enabled = False
+            btnCorp.Enabled = False
+            btnProtype.Enabled = False
+            btnPros.Enabled = False
+            btnEditshop.Enabled = False
+            btnEmp.Enabled = True
+            btnDep.Enabled = True
+            btnCus.Enabled = True
+            btnList.Enabled = False
+            btnReport.Enabled = False
 
         ElseIf depname = "การบัญชี" Then
 
@@ -73,7 +85,7 @@ Public Class frmMain
 
         ElseIf depname = "Administrator" Then
 
-            btnSell.Enabled = True
+            btnSell.Enabled = False
             btnCorp.Enabled = True
             btnProtype.Enabled = True
             btnPros.Enabled = True
@@ -150,6 +162,9 @@ Public Class frmMain
 
         MessageBox.Show("เปลี่ยนข้อมูลร้านเรียบร้อยแล้ว", "การแก้ไขข้อมูลร้านสำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         myCon.Close()
+        txtname.Enabled = False
+        txtadd.Enabled = False
+        btnupdate.Visible = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnList.Click

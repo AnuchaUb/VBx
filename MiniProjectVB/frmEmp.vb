@@ -1,7 +1,7 @@
 ﻿Imports System.Configuration
 Imports System.Data
 Imports System.Data.SqlClient
-
+' แก้ไขวันเกิด และวันเข้าทำงาน
 Public Class frmEmp
     Dim myCon As New SqlConnection
 
@@ -139,10 +139,12 @@ Public Class frmEmp
         btnEdit.Enabled = False
         btnDelete.Enabled = False
 
+
         ctxt()
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+
         txtEmpid.Text = txtEmpid.Text.Trim()
         oeid = txtEmpid.Text
         oen = txtEmpname.Text
@@ -150,10 +152,11 @@ Public Class frmEmp
         oeidc = txtEmpidcard.Text
         oeph = txtEmpphone.Text
         strBtn = "edit"
+
         Panel1.Enabled = False
         Panel2.Enabled = False
         Panel3.Enabled = True
-        If depname = "ผู้จัดการ" Or depname = "บุคคล" Then
+        If depname = "ผู้จัดการ" Or depname = "บุคคล" Or depname = "Administrator" Then
 
             'ElseIf empid = txtEmpid.Text Then
 
@@ -225,6 +228,44 @@ Public Class frmEmp
         ElseIf Not IsNumeric(txtemppostalcode.Text) Or Not IsNumeric(txtempphone.text) Or Not IsNumeric(txtEmpidcard.text) Or Not IsNumeric(txtEmpsalary.text) Then
             MessageBox.Show("กรุณากรอกข้อมูลให้ถูกต้อง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
+        ElseIf txtEmppostalcode.TextLength <> 5 Then
+            MessageBox.Show("กรุณากรอกรหัสไปรษณีย์ให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmppostalcode.Focus()
+            Exit Sub
+        ElseIf txtEmpidcard.TextLength <> 13 Then
+            MessageBox.Show("กรุณากรอกรหัสบัตรประชาชนให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmpidcard.Focus()
+            Exit Sub
+        ElseIf txtEmpphone.TextLength <> 10 Then
+            MessageBox.Show("กรุณากรอกเบอร์โทรศัพท์ให้ครบถ้วน!", "ข้อมูลไม่ครบถ้วน", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmpphone.Focus()
+            Exit Sub
+        ElseIf txtEmpbirthday.TextLength < 8 Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เกิดให้ครบถ้วน!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmpbirthday.Focus()
+            Exit Sub
+        ElseIf Not IsDate(txtEmpbirthday.text) Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เกิดให้ตรงตามรูปแบบดังนี้" & vbCrLf & "เดือน/วัน/ปี : 30/01/1999", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmpbirthday.Focus()
+            Exit Sub
+        ElseIf txtEmpbirthday.Text > Date.Now Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เกิดตามความจริง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmpbirthday.Focus()
+            Exit Sub
+        ElseIf txtEmphiredate.TextLength < 8 Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เข้าทำงานให้ถูกต้อง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmphiredate.Focus()
+            Exit Sub
+        ElseIf Not IsDate(txtEmphiredate.text) Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เข้าทำงานให้ตรงตามรูปแบบดังนี้" & vbCrLf & "เดือน/วัน/ปี : 30/01/1999", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmphiredate.Focus()
+            Exit Sub
+        ElseIf txtEmphiredate.Text > Date.Now Then
+            MessageBox.Show("กรุณากรอกวัน/เดือน/ปี เข้าทำงานตามความจริง!", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmphiredate.Focus()
+            Exit Sub
+
+
         Else
             Dim gender As String
             Dim dep As String
@@ -258,7 +299,7 @@ Public Class frmEmp
                 End If
                 'การเช็ต ชื่อ+นามสกุล
                 myDR.Close()
-                strSql = "select empname,emplastname from tbemployee where empname = @en and emplastname = @eln"
+                strSql = "select empname,emplastname from tbemployee where empname = @en And emplastname = @eln"
                 myCom = New SqlCommand(strSql, myCon)
                 myCom.CommandType = CommandType.Text
                 myCom.Parameters.AddWithValue("en", txtEmpname.Text)
@@ -342,7 +383,7 @@ Public Class frmEmp
                 End If
                 'การเช็ค ชื่อ+นามสกุล
                 If txtEmpname.Text <> oen And txtEmplname.Text <> oeln Then
-                    strSql = "select empname,emplastname from tbemployee where empname = @en and emplastname = @eln"
+                    strSql = "select empname,emplastname from tbemployee where empname = @en And emplastname = @eln"
                     myCom = New SqlCommand(strSql, myCon)
                     myCom.CommandType = CommandType.Text
                     myCom.Parameters.AddWithValue("oen", txtEmpname.Text)
@@ -530,7 +571,7 @@ Public Class frmEmp
         End If
     End Sub
 
-    Private Sub txtEmpbirthday_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpbirthday.KeyPress
+    Private Sub txtEmpbirthday_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmpbirthday.KeyPress, txtEmphiredate.KeyPress
         Dim keyInt As Integer = Asc(e.KeyChar)
         If (keyInt >= 48 And keyInt <= 57) Or keyInt = 48 Or keyInt = 8 Or keyInt = 47 Or keyInt = 45 Then
             Exit Sub
@@ -538,4 +579,5 @@ Public Class frmEmp
             e.KeyChar = Nothing
         End If
     End Sub
+
 End Class

@@ -61,7 +61,6 @@ Partial Class frmCus
         Me.txtScusname = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.dgvShowcus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -88,7 +87,7 @@ Partial Class frmCus
         Me.radFemale.AutoSize = True
         Me.radFemale.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radFemale.ForeColor = System.Drawing.Color.Navy
-        Me.radFemale.Location = New System.Drawing.Point(919, 63)
+        Me.radFemale.Location = New System.Drawing.Point(830, 63)
         Me.radFemale.Name = "radFemale"
         Me.radFemale.Size = New System.Drawing.Size(67, 35)
         Me.radFemale.TabIndex = 8
@@ -101,7 +100,7 @@ Partial Class frmCus
         Me.radMale.AutoSize = True
         Me.radMale.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radMale.ForeColor = System.Drawing.Color.Navy
-        Me.radMale.Location = New System.Drawing.Point(852, 63)
+        Me.radMale.Location = New System.Drawing.Point(763, 63)
         Me.radMale.Name = "radMale"
         Me.radMale.Size = New System.Drawing.Size(61, 35)
         Me.radMale.TabIndex = 7
@@ -241,14 +240,14 @@ Partial Class frmCus
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(102, 31)
         Me.Label16.TabIndex = 76
-        Me.Label16.Text = "ว/ด/ป เกิด :"
+        Me.Label16.Text = "ด/ว/ป เกิด :"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Navy
-        Me.Label18.Location = New System.Drawing.Point(794, 65)
+        Me.Label18.Location = New System.Drawing.Point(705, 65)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(52, 31)
         Me.Label18.TabIndex = 78
@@ -373,7 +372,7 @@ Partial Class frmCus
         'txtCusbirthday
         '
         Me.txtCusbirthday.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCusbirthday.Location = New System.Drawing.Point(569, 67)
+        Me.txtCusbirthday.Location = New System.Drawing.Point(580, 67)
         Me.txtCusbirthday.Name = "txtCusbirthday"
         Me.txtCusbirthday.Size = New System.Drawing.Size(111, 27)
         Me.txtCusbirthday.TabIndex = 6
@@ -516,7 +515,6 @@ Partial Class frmCus
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.txtCusprovince)
         Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.Label16)
         Me.Panel3.Controls.Add(Me.txtCuspostalcode)
         Me.Panel3.Controls.Add(Me.Label18)
@@ -529,17 +527,6 @@ Partial Class frmCus
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1357, 254)
         Me.Panel3.TabIndex = 91
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("_Layiji MaHaNiYom V 1.2", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Navy
-        Me.Label10.Location = New System.Drawing.Point(686, 65)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(104, 31)
-        Me.Label10.TabIndex = 76
-        Me.Label10.Text = "1999-01-30"
         '
         'frmCus
         '
@@ -601,7 +588,6 @@ Partial Class frmCus
     Friend WithEvents txtScusname As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label10 As Label
     Friend WithEvents btnSeach As Button
     Friend WithEvents Button1 As Button
 End Class

@@ -152,6 +152,7 @@ Public Class frmProtype
                         myDR.Close()
                         Exit Sub
                     End If
+                    myDR.Close()
                 End If
 
                 strSql = "update tbtypeofproduct set typeproductid=@tid,typename=@tn where typeproductid=@oldtypeid"

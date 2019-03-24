@@ -366,7 +366,7 @@ Public Class frmSale
 
             MessageBox.Show("ไม่มีสินค้าในรายการกรุณาเลือกสินค้าก่อนครับ", "ยังไม่ทำการเลือกสินค้า", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else 'ทำการขาย
-            dgr = MessageBox.Show("คุณต้องการจะลบข้อมูล " & lblOrdernumber.Text & " ใช่หรือไม่", "แจ้งเตือน", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2)
+            dgr = MessageBox.Show("คุณต้องการจะบันทึกรายการขายที่ " & lblOrdernumber.Text & " ใช่หรือไม่", "แจ้งเตือน", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2)
             If dgr = DialogResult.Yes Then
                 connData()
                 strSql = "insert into tbsale(saleid,saledate,empid,cusid) values(@sid,@sdate,@sempid,@scusid)"
